@@ -4,35 +4,51 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Gapminder Dashboard</title>
+    <title>World Statistics Dashboard</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}" />    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}" />
 </head>
 
 <body>
 
     <div style="margin-bottom: 5%;">
         <nav class="navbar fixed-top navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Gapminder Dashboard</a>
+            <a class="navbar-brand" href="#">World Statistics Dashboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-    </div s>
+    </div>
 
 
     <div class="row body-margin">
-        <nav aria-label="breadcrumb bread-crumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">2013 Statistics</li>
-            </ol>
-        </nav>
+        <div class="col col-sm-2">
+            <nav aria-label="breadcrumb bread-crumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">2013 Statistics</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col col-sm-8 float-right">
+            <ul class="nav nav-pills nav-fill pull-right">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Economy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Population</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Health</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="row" style="margin-left: 5%;">
+    <div class="row" style="margin-left: 1%;">
         <div class="col">
             {{ script|safe }}
         </div>
